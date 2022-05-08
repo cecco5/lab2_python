@@ -182,10 +182,149 @@ r1 = range(0, 55, 5)
 r_list = list(r)
 r1_list = list(r1)
 
-print(r)
-print(r1)
-print(r_list)
-print(r1_list)
+#print(r)
+#print(r1)
+#print(r_list)
+#print(r1_list)
+
+# ---------------------------ESERCIZI PER CASA------------------------------#
+
+# Esercizio 1: Scrivi una funzione che prende come parametro la temperatura in gradi Celsius e la trasforma in gradi
+# Fahrenheit.
+# Cercare su internet come si calcola la conversione da Celsius a Fahrenheit.
+
+
+def celsius_fahreneit(temp):
+    t_f = temp + 32
+    return t_f
+
+
+#tc = int(input("Inserire temperatura in gradi centigradi (°): "))
+#tf = celsius_fahreneit(tc)
+#print(f"La temperatura equivale a {tf}F.")
+
+
+# Esercizio 2: Scrivi una funzione che prende tre numeri come parametri e restituisce il più grande tra loro.
+# La funzione avrà 3 parametri, occhio!
+
+
+def massimo(a, b, c):
+    if a >= b and a >= c:
+        m = a
+    elif a <= b and a >= c:
+        m = b
+    else:
+        m = c
+    return m
+
+
+#num1 = int(input("Inserire primo numero: "))
+#num2 = int(input("Inserire secondo numero: "))
+#num3 = int(input("Inserire terzo numero: "))
+
+#print(f"il massimo tra i tre numeri è: {massimo(num1, num2, num3)}.")
+
+
+# Esercizio 3: Scrivi una funzione che prenda come parametri le coordinate cartesiane x e y di due punti e calcoli la
+# distanza tra i due.
+# La funzione avrà 4 paramenti, che potrete chiamare per comodità ax, ay, bx e by.
+# Cercare la formula per calcolare la distanza tra due punti cartesiani.
+
+def distanza_2_punti(xa, ya, xb, yb):
+    d = sqrt((xa-xb)**2+(ya-yb)**2)
+    return d
+
+
+# Punto A
+xa = 2
+ya = 2
+
+
+# Punto B
+xb = 2
+yb = 4
+
+#print(f"la distanza tra i punti A e B è: {distanza_2_punti(xa, ya, xb, yb)}")
+
+
+# Esercizio 4: Scrivi un programma che, passata come parametro una lista, calcoli e stampi la radice quadrata di tutti
+# gli elementi della lista.
+# ricordatevi che il modulo math va sempre alla prima riga del codice!
+# Potete usare questa lista: L = [256, 4, 16, 49, 121, 36]
+
+def square_list(l):
+    x = 0
+    while x < len(l):
+        l[x] = (l[x])**2
+        x += 1
+    return l
+
+
+def square_list2(l):
+    lt = []
+    for x in l:
+        lt.append(x**2)
+    return lt
+
+
+#L = [256, 4, 16, 49, 121, 36]
+#print(square_list2(L))
+
+
+# Esercizio 5: Date due liste scrivere una funzione che verifichi se i primi elementi delle due liste sono uguali
+# (utilizzare indici della lista).
+# In questo caso, i due parametri della funzione saranno due liste!
+def same_first(l1, l2):
+    if l1[0] == l2[0]:
+        return True
+    return False
+
+
+#L1 = [256, 4, 16, 49, 121, 36]
+#L2 = [25, 3, 1, 4, 11, 6]
+
+#print(same_first(L1, L2))
+
+
+# Esercizio 6: Scrivi un programma che, passata come parametro una lista di interi, fornisce in output il maggiore
+# tra i numeri contenuti nella lista.
+
+def max_list(l):
+    ind = 0
+    max_prov = l[ind]
+    while ind < len(l):
+        if l[ind] >= max_prov:
+            max_prov = l[ind]
+        ind += 1
+    return max_prov
+
+
+L1 = [256, 4, 16, 490, 121, 36]
+print(max_list(L1))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
